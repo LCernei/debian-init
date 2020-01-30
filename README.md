@@ -3,9 +3,9 @@
 OS-Tweaks is a set of guidelines for environment setup after a fresh OS install.
 
 This guide is available for:
-* [Debian 10](./debian/README.md)
-* [Pop!_OS 19.10](./pop!_os/README.md)
-* [Windows 10](./win10/README.md)
+* [Debian 10](./debian/)
+* [Pop!_OS 19.10](./pop!_os/)
+* [Windows 10](./win10/)
 
 I created this guide based on my use-cases, but most configurations should work on any machine.
 
