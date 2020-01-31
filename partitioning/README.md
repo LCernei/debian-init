@@ -1,0 +1,1 @@
+efi system, win reserved, disk C, win recovery, linux, swap

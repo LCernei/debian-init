@@ -6,6 +6,7 @@ This guide is available for:
 * [Debian 10](./debian/)
 * [Pop!_OS 19.10](./pop!_os/)
 * [Windows 10](./win10/)
+* [Partitioning](./partitioning)
 
 I created this guide based on my use-cases, but most configurations should work on any machine.
 
