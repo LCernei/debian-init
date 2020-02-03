@@ -58,7 +58,7 @@ Add this location to system Path.
 
 Write the following lines inside `git.cmd`:
 ```bat
-@echo off
+@ECHO OFF
 %WINDIR%\System32\bash.exe -c "git %*"
 ```
 
