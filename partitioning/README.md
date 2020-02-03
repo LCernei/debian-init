@@ -27,7 +27,7 @@ Proceed with the installation till the "Which type of installation do you want?"
 Select "Custom: Install Windows only (advanced)".\
 Select the empty 200 GB space allocated before (between Boot and Linux).\
 Click next and install Windows 10 as usual.\
-(The reserved and recovery partitions area created automatically)
+(The reserved and recovery partitions are created automatically)
 
 ## Installing rEFInd
 
