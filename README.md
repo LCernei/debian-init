@@ -1,12 +1,11 @@
 # OS-Tweaks
 
-OS-Tweaks is a set of guidelines for environment setup after a fresh OS install.
+OS-Tweaks is a set of guides for environment setup after a fresh OS install.
 
-This guide is available for:
+* [Partitioning](./partitioning)
 * [Debian 10](./debian/)
 * [Pop!_OS 19.10](./pop!_os/)
 * [Windows 10](./win10/)
-* [Partitioning](./partitioning)
 
 I created this guide based on my use-cases, but most configurations should work on any machine.
 
@@ -15,6 +14,7 @@ My hardware:
 * __Processor:__ Intel Core i5-8300H
 * __Memory:__ 8192 MB, DDR4-2666
 * __Graphics adapter:__ NVIDIA GeForce GTX 1050 (Laptop)
+* __Storage:__ 512 GB NVMe SSD
 
 
 ## Installation
