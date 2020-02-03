@@ -43,6 +43,13 @@ Reboot.
 
 Now we have a dual-boot system (Windows 10 and Pop!_OS) managed by the rEFInd bootloader.
 
+To set a custom icon for each OS use
+```bash
+sudo tune2fs -L myname /dev/mypartition
+```
+and provide a `os_myname.png` file inside `/EFI/refind/icons`.\
+(Replace `myname` and `mypartition` with the coresponding label and partition. Only works for ext file systems.) 
+
 ## Unrelated tips
 
 I use Windows 10 WSL (debian). To confire IDEs to use the WSL git comand:\
