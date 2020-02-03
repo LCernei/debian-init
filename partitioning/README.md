@@ -47,7 +47,7 @@ Now we have a dual-boot system (Windows 10 and Pop!_OS) managed by the rEFInd bo
 
 I use Windows 10 WSL (debian). To confire IDEs to use the WSL git comand:\
 Create a `git.cmd` file in a separate location (`C:\Users\user\source\wslWrapper`).\
-Add this location to system Path.\
+Add this location to system Path.
 
 Write the following lines inside `git.cmd`:
 ```bat
