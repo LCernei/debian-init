@@ -1,5 +1,8 @@
 # Partitionig, OS installation and bootloaders
 
+![Final layout](https://i.imgur.com/OnuBd3k.png)
+(Some size values might differ)
+
 ## Installing Pop!_OS
 
 Boot from a pop_os USB stick.\
@@ -24,7 +27,7 @@ Proceed with the installation till the "Which type of installation do you want?"
 Select "Custom: Install Windows only (advanced)".\
 Select the empty 200 GB space allocated before (between Boot and Linux).\
 Click next and install Windows 10 as usual.\
-(The )
+(The reserved and recovery partitions area created automatically)
 
 ## Installing rEFInd
 
@@ -51,3 +54,7 @@ Write the following lines inside `git.cmd`:
 @echo off
 %WINDIR%\System32\bash.exe -c "git %*"
 ```
+
+When the IDE looks for `git.exe` indicate `C:\Users\user\source\wslWrapper\git.cmd`.
+
+[Tip Source](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000176290/comments/360000277759)
