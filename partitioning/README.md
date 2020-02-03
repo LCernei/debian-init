@@ -43,7 +43,7 @@ Reboot.
 
 Now we have a dual-boot system (Windows 10 and Pop!_OS) managed by the rEFInd bootloader.
 
-To set a custom icon for each OS use
+To set a custom icon for each OS, use
 ```bash
 sudo tune2fs -L myname /dev/mypartition
 ```
