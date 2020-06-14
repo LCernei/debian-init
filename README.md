@@ -3,8 +3,9 @@
 OS-Tweaks is a set of guides for environment setup after a fresh OS install.
 
 * [Partitioning](./partitioning)
-* [Debian 10](./debian/)
-* [Pop!_OS 19.10](./pop!_os/)
+* [Debian](./debian/)
+* [Pop!_OS](./pop!_os/)
+* [Manjaro](./manjaro/)
 * [Windows 10](./win10/)
 
 I created this guide based on my use-cases, but most configurations should work on any machine.

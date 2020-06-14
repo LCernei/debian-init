@@ -1,57 +1,17 @@
-//terminal:
-vim
-git
-build-essential
-gcc, gpp
-curl, wget
-apt-transport-https
-ca-certificates
-gnupg2
-software-properties-common
-cpu-checker
-apt-file //apt-file --package-only search /lib/firmware/
+# Windows 10 configuration
 
-firmware-realtek
-rfkill
+## WSL git
 
-tree
-xclip
-xdotool, wmctrl
-bash-completion
-members, pkg-config
-grub-efi
-lshw
-dkms
-linux-headers-$(uname -r)
-neofetch
-snapd?
-flatpak?, gnome-software-plugin-flatpak
-(snap) node -> (npm) n -> remove node and npm -> n 12 -> configure npm -> manually remove n -> (npm) n
-hashcat
+I use Windows 10 WSL (debian). To confire IDEs to use the WSL git comand:\
+Create a `git.cmd` file in a separate location (`C:\Users\user\source\wslWrapper`).\
+Add this location to system Path.
 
-dotnet-sdk-3.0
-python3-pip
-python3-venv
-default-jdk
-esl-erlang, elixir
+Write the following lines inside `git.cmd`:
+```bat
+@ECHO OFF
+%WINDIR%\System32\bash.exe -c "git %*"
+```
 
-//ui
-vscode
-jetbrains toolbox - rider, intellij idea, android studio
-chrome
-calibre
-(flatpak) libreoffice # apt/deb versions had update problems
-discord
-() rocket.chat //xra-py4-q2h
-telegram
-vlc
-() postman
-arduino
-blender?
-gimp?
-audacity?
+When the IDE looks for `git.exe` indicate `C:\Users\user\source\wslWrapper\git.cmd`.
 
-//shell-extensions
-draw on your screen
-GSConnect
-uptime indicator
+[Tip Source](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000176290/comments/360000277759)

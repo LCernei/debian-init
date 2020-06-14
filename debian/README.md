@@ -1,3 +1,5 @@
+# Debian configuration
+
 //terminal:
 vim
 git

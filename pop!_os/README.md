@@ -1,3 +1,5 @@
+# Pop!_OS configuration
+
 //terminal:
 vim
 git
