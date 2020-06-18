@@ -1,5 +1,7 @@
 # Pop!_OS configuration
 
+[Ubuntu](https://github.com/kfechter/LegionY530Ubuntu)
+
 //terminal:
 vim
 git
