@@ -21,9 +21,10 @@ sudo reboot
 ## RTL8822BE wifi
 
 ```
-sudo vim /etc/modprobe.d/blacklist-ideapad.conf
+echo "blacklist ideapad_laptop" | sudo tee /etc/modprobe.d/blacklist-ideapad.conf
+echo "options r8822be aspm=0" | sudo tee /etc/modprobe.d/r8822be.conf
+sudo reboot
 ```
-Write `blacklist ideapad_laptop` inside
 
 ## Useful commands
 
