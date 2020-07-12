@@ -17,6 +17,7 @@ sudo system76-power graphics [nvidia|integrated]
 sudo systemctl stop system76power
 sudo reboot
 ```
+TO DO: Configure external displays. Maybe System76 on Mnajaro is a bad idea.
 
 ## RTL8822BE wifi
 
