@@ -46,6 +46,7 @@ After the reboot (for Nvidia), only the external monitors will work.\
 TO DO: Find a solution for blank internal display when using Nvidia.
 
 ## RTL8822BE wifi
+Install `firmware-linux` and `firmware-realtek` (may not be necessary in the future). 
 
 ```
 echo "blacklist ideapad_laptop" | sudo tee /etc/modprobe.d/blacklist-ideapad.conf
