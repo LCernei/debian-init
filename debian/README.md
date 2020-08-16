@@ -53,3 +53,8 @@ echo "blacklist ideapad_laptop" | sudo tee /etc/modprobe.d/blacklist-ideapad.con
 echo "options r8822be aspm=0" | sudo tee /etc/modprobe.d/r8822be.conf
 sudo reboot
 ```
+
+## Steam `libGL.so.1` error
+```
+sudo apt install libgl1-nvidia-glvnd-glx:i386
+```
