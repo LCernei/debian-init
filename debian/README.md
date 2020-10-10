@@ -45,6 +45,11 @@ sudo reboot
 After the reboot (for Nvidia), only the external monitors will work.\
 TO DO: Find a solution for blank internal display when using Nvidia.
 
+## Nvidia with Optimus-switch
+This works mmuch better than system76-power. Is simpler and more flexible.\
+[optimus-switch-gdm](https://github.com/dglt1/optimus-switch-gdm)\
+My modification: I used bbswitcht for enabling/disabling the GPU. 
+
 ## RTL8822BE wifi
 Install `firmware-linux` and `firmware-realtek` (may not be necessary in the future). 
 
