@@ -1,10 +1,11 @@
 # Partitionig, OS installation and bootloaders
-
+## Partition layout example
 ![Final layout](https://i.imgur.com/OnuBd3k.png)
-(Some size values might differ)
+
+## General approach
+I found it easier to install the linux system before Windows. Microsoft automatically creates some partitions - this may result in unexpected modifications to the planned layout. That's why I initially create the linux partitions and leave a block of free spcae. This way, Windows is forced to fit everything in that block.
 
 ## Installing Pop!_OS
-
 Boot from a pop_os USB stick.\
 Proceed with the installation till the "Try or Install" step.\
 Select "Custom (Advanced)".\
@@ -21,7 +22,6 @@ Click "Erase and Install".\
 Install Pop!_OS as usual.
 
 ## Installing Windows10
-
 Boot from a win10 USB stick.\
 Proceed with the installation till the "Which type of installation do you want?" step.\
 Select "Custom: Install Windows only (advanced)".\
@@ -30,9 +30,7 @@ Click next and install Windows 10 as usual.\
 (The reserved and recovery partitions are created automatically)
 
 ## Installing rEFInd
-
-Boot from a rEFInd USB stick.\
-Select the linux os (probably has the Ubuntu logo).\
+Boot into the linux system: either using a rEFInd USB stick or by initially editing EFI boot entries in Windows (using EasyUEFI by Hasleo)\
 Open terminal, and open a root shell: `sudo su -`.\
 Go to the efi partition:`cd /boot/efi`.\
 Backup the Windows bootloader: `tar cvf win10.tar EFI/Windows && mv win10.tar ~/`.\
@@ -48,4 +46,9 @@ To set a custom icon for each OS, use
 sudo tune2fs -L myname /dev/mypartition
 ```
 and provide a `os_myname.png` file inside `/EFI/refind/icons`.\
-(Replace `myname` and `mypartition` with the coresponding label and partition. Only works for ext file systems.) 
+(Replace `myname` and `mypartition` with the coresponding label and partition. Only works for ext file systems.) \
+Another approach for icons:
+> To customize the icons, simply copy the icon that you want to use, to root of system partition. \
+> Rename it to .VolumeIcon.png. Refind supports PNG, JPG, BMP, and ICNF icons.
+
+Source: [TeejeeTech](https://teejeetech.in/2020/09/05/linux-multi-boot-with-refind/)
