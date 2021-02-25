@@ -52,3 +52,8 @@ Another approach for icons:
 > Rename it to .VolumeIcon.png. Refind supports PNG, JPG, BMP, and ICNF icons.
 
 Source: [TeejeeTech](https://teejeetech.in/2020/09/05/linux-multi-boot-with-refind/)
+
+## Installing GRUB2 (aternative to rEFInd)
+`apt install grub-efi-amd64`\
+`grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB` optionally you can add `--removable`\
+`grub-mkconfig`
