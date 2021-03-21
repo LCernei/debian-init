@@ -1,54 +1,50 @@
 # Debian configuration
 
-## Debian Sid
-Edit `/etc/apt/sources.list` (non-free contrib are optional).
+I started with a minimal server installation (no DE, no system-tools, etc.).\
+First time the system boots into text mode.
 
+## (Optional) Remove grub
+```
+su -
+apt purge grub*
+rm -r /boot/grub
+rm -r /boot/efi/EFI/debian
+```
+
+## Debian Sid
+```
+apt install vim
+vim /etc/apt/sources.list
+```
+Replace the content of `/etc/apt/sources.list` with the lines below (non-free contrib are optional).
 ```
 deb http://deb.debian.org/debian/ sid main non-free contrib
 deb-src http://deb.debian.org/debian/ sid main non-free contrib
 ```
+Save the file and apply the new changes:
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
-## Nvidia graphics with system76-power
-Install an System76 recommended kernel (compatible with the graphics driver). Check the currently installed version with `uname -r`.
+
+## Install Ansible
 ```
-sudo apt install linux-image-5.4.0-7634-generic
+apt install git sudo ansible
+usermod -aG sudo lc
+reboot
+cd Documents
+git clone git@github.com:LCernei/os-tweaks.git
+cd os-tweaks/ansible
 ```
-Boot from the newly installed kernel and remove the old one (optional).
+Run the ansible playbook:
 ```
-sudo apt remove --purge linux-image-5.7.0-1-amd64
+ansible-playbook site.yaml -i hosts -K
 ```
-Add the System76 repository to the apt sources.
-```
-sudo apt-add-repository -ys ppa:system76-dev/stable
-sudo apt update
-```
-There may appear an gpg error "... public key is not available: NO_PUBKEY ...". It may be fixed using the \<KEY\> in the error.
-```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <KEY>
-```
-Download `python3-xkit` from [pkgs.org/download/python3-xkit](https://pkgs.org/download/python3-xkit) and install using apt.
-```
-sudo apt install ./python3-xkit_0.5.0ubuntu4_all.deb
-```
-Install the System76 related tools and drivers
-```
-sudo apt install system76-driver-nvidia system76-power
-```
-Switch to Nvidia graphics and reboot. You can switch back with `system76-power graphics internal`.
-```
-system76-power graphics nvidia
-sudo reboot
-```
-After the reboot (for Nvidia), only the external monitors will work.\
-TO DO: Find a solution for blank internal display when using Nvidia.
+Reboot. (Optional: restore the dotfiles)
 
 ## Nvidia with Optimus-switch
-This works mmuch better than system76-power. Is simpler and more flexible.\
-[optimus-switch-gdm](https://github.com/dglt1/optimus-switch-gdm)\
-My modification: I used bbswitcht for enabling/disabling the GPU. 
+This works better than system76-power. Is simpler and more flexible.\
+[optimus-switch-gdm](https://github.com/dglt1/optimus-switch-gdm) 
 
 ## RTL8822BE wifi
 Install `firmware-linux` and `firmware-realtek` (may not be necessary in the future). 
